@@ -1137,8 +1137,8 @@ require(['jquery'], function ($) {
 			contentHtml += '</li>';
 		});
 
-		// HTML添加到APP
-		$('#app').append(html + tabHtml + '<span class="active-span"></span></ul><div class="choice-swipe"><ul class="swiper-wrapper"><div style="position:absolute;text-align:center;top:50%;width:100%;margin-top:-64px;color:#444">正在加载页面中...</div></ul></div><div class="bottom-close acrliy"></div></div></div>');
+		// HTML添加到AP
+		$('#app').append(html + tabHtml + '<span class="active-span"></span></ul><div class="choice-swipe acrliy"><ul class="swiper-wrapper"><div style="position:absolute;text-align:center;top:50%;width:100%;margin-top:-64px;color:#444">正在加载页面中...</div></ul></div><div class="bottom-close acrliy"></div></div></div>');
 
 		setTimeout(function () {
 			$(".page-bg").addClass("animation");
@@ -1372,7 +1372,7 @@ require(['jquery'], function ($) {
 		}, {
 			"title": "Github",
 			"value": "openurl",
-			"description": "https://github.com/liumingye/quarkHomePage"
+			"description": "https://github.com/6xingyv/HomePage"
 		}, {
 			"title": "关于",
 			"description": "当前版本：" + app.version
