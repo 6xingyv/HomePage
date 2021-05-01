@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css"
+        integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/6xingyv.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./image/heart.png">
+	<link rel="stylesheet" type="text/css" href="css/main.css?v=1.50.16069" />
+	<link rel="stylesheet" id="nightCss" type="text/css" href="css/night.css?v=1.50.16069" disabled />
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" src="http://yijuzhan.com/api/word.php?m=js"></script>
+    <script>
+        var t = document.getElementsByTagName('title')[0];
+        t.innerHTML = str[0]
+    </script>
+	<div id="app">
+		<div class="page-home">
+			<div class="logo"></div>
+			<div class="ornament-input-group" style="display: none;"></div>
+			<div class="bookmark"></div>
+		</div>
+		<div class="page-search acrliy">
+			<div class="history">
+				<div class="emptyHistory"></div>
+				<ul class="content"></ul>
+			</div>
+			<ul class="suggestion">
+                <li>鸣谢：刘明野/quarkHomePage</li>
+            </ul>
+			<div class="bottom-row">
+				<div class="search-from">
+					<div class="input-bg">
+						<input type="text" class="search-input" placeholder="搜索或输入网址" />
+						<div class="empty-input"></div>
+						<div class="search-btn">取消</div>
+					</div>
+				</div>
+				<div class="shortcut">
+					<div class="content">
+						<ul class="shortcut1">
+							<li>www.</li>
+							<li>m.</li>
+							<li>wap.</li>
+							<li>.org</li>
+						</ul>
+						<ul class="shortcut2">
+							<li>.</li>
+							<li>/</li>
+							<li>.cn</li>
+							<li>.com</li>
+							<li>.org</li>
+						</ul>
+						<ul class="shortcut3">
+							<li>快搜:</li>
+							<li>百科</li>
+							<li>视频</li>
+							<li>豆瓣</li>
+							<li>微博</li>
+							<li>知乎</li>
+							<li>小说</li>
+							<li>新闻</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<input type="text" class="s-temp" />
+        
+	</div>
+	<script>
+		var app = window.app || {};
+		app.version = "1.50.16069";
+	</script>
+	<script src="js/lib/require.js?v=1.50.16069"></script>
+	<script src="js/main.js?v=1.50.16069"></script>
+	<script>
+		if (location.protocol == "https:" && navigator.serviceWorker) {
+			navigator.serviceWorker.register('sw.js');
+		}
+	</script>
+	<link rel="stylesheet" type="text/css" href="css/lazy.css?v=1.50.16069" />
+    <script src="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js"
+        integrity="sha384-gCMZcshYKOGRX9r6wbDrvF+TcCCswSHFucUzUPwka+Gr+uHgjlYvkABr95TCOz3A" crossorigin="anonymous">
+    </script>
+    <script src="./js/events.js"></script>
+</body>
+
+</html>
