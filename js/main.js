@@ -1328,13 +1328,10 @@ require(['jquery'], function ($) {
 				"v": "diy"
 			}]
 		}, {
-			"title": "设置壁纸",
-			"value": "wallpaper"
-		}, {
 			"title": "设置LOGO",
 			"value": "logo"
 		}, {
-			"title": "恢复默认壁纸和LOGO",
+			"title": "恢复默认LOGO",
 			"value": "delLogo"
 		}, {
 			"title": "图标颜色",
@@ -1375,7 +1372,10 @@ require(['jquery'], function ($) {
 			"description": "https://github.com/6xingyv/HomePage"
 		}, {
 			"title": "关于",
-			"description": "当前版本：" + app.version
+			"description": "当前版本：" + app.version + "<br>这是一个简单的主页，目前兼容via浏览器，其他浏览器也可以试试。<br>目前壁纸来源是Bing美图~每天精选全球摄影就不用担心壁纸选择困难症了！"
+		}, {
+			"title": "鸣谢",
+			"description": "刘明野/quarkHomePage"
 		}];
 		var html = '<div class="page-settings"><div class="set-header"><div class="set-back"></div><p class="set-logo">主页设置</p></div><ul class="set-option-from">';
 		for (var json of data) {
