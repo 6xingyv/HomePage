@@ -9,3 +9,7 @@
     background: url(https://api.kdcc.cn/img/jump4k.php) center no-repeat fixed;
     background-size: auto 100%;
 }
+
+body::scroll-bar-thumb {
+background:transport;
+}
