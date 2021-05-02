@@ -1096,11 +1096,6 @@ require(['jquery'], function ($) {
 					"img": "ximalaya",
 					"url": "m.ximalaya.com"
 				}, {
-					"hl": "第2课堂",
-					"shl": "守护全国2亿青少年健康成长",
-					"img": "2-class",
-					"url": "m.2-class.com"
-				}, {
 					"hl": "Mozilla",
 					"shl": "学习web开发的最佳实践",
 					"img": "mozilla",
