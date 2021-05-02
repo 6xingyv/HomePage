@@ -246,6 +246,10 @@ require(['jquery'], function ($) {
 				"name": "IT之家",
 				"url": "https://m.ithome.com",
 				"icon": "icon/ithome.png"
+			}, {
+				"name": "设置",
+				"url": "settings()",
+				"icon": "icon/settings.png"
 			}],
 		};
 		this.options = $.extend({}, this.options, options);
