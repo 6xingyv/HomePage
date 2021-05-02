@@ -1138,7 +1138,7 @@ require(['jquery'], function ($) {
 		});
 
 		// HTML添加到AP
-		$('#app').append(html + tabHtml + '<span class="active-span"></span></ul><div class="choice-swipe acrliy"><ul class="swiper-wrapper"><div style="position:absolute;text-align:center;top:50%;width:100%;margin-top:-64px;color:#444">正在加载页面中...</div></ul></div><div class="bottom-close acrliy"></div></div></div>');
+		$('#app').append(html + tabHtml + '<span class="active-span"></span></ul><div class="choice-swipe"><ul class="swiper-wrapper"><div style="position:absolute;text-align:center;top:50%;width:100%;margin-top:-64px;color:#444">正在加载页面中...</div></ul></div><div class="bottom-close acrliy"></div></div></div>');
 
 		setTimeout(function () {
 			$(".page-bg").addClass("animation");
