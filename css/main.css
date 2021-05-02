@@ -590,10 +590,10 @@ body,html {
 	opacity: 1;
 }
 .page-choice{
-	top:0;
+	top:10%;
 	position:absolute;
 	width:100%;
-	height:100%;
+	height:90%;
 	padding: 10px;
 	transform: translate3d(0, 100%, 0);
 	transition: transform .4s;
@@ -602,7 +602,7 @@ body,html {
 	transform: translate3d(0, 0, 0);
 }
 .page-choice .page-content{
-	border-radius:9px;
+	border-radius:20px;
 	position: relative;
 	height: 100%;
 }
@@ -643,6 +643,7 @@ body,html {
 .bottom-close{
 	position:absolute;bottom:0;width:100%;height:40px;
 	z-index: 1;
+	border-radius:0 0 20px 20px;
 }
 .bottom-close:after{
 	position:absolute;
