@@ -1367,6 +1367,7 @@ require(['jquery'], function ($) {
 			"description": "https://github.com/6xingyv/HomePage"
 		}, {
 			"title": "关于",
+			"value": "about",
 			"description": "当前版本：" + app.version + "<br>这是一个简单的主页，目前兼容via浏览器，其他浏览器也可以试试。<br>目前壁纸来源是Bing美图~每天精选全球摄影就不用担心壁纸选择困难症了！"
 		}, {
 			"title": "鸣谢",
@@ -1472,6 +1473,8 @@ require(['jquery'], function ($) {
 				} catch (e) {
 					alert("导入失败!");
 				}
+			} else if (value === "about") {
+				location.href = "https://6xingyv.github.io/"
 			} else if (evt.target.className !== 'set-select' && $this.find('.set-select').length > 0) {
 				$.fn.openSelect = function () {
 					return this.each(function (idx, domEl) {
