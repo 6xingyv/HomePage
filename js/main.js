@@ -1300,11 +1300,11 @@ require(['jquery'], function ($) {
 			"type": "select",
 			"value": "engines",
 			"data": [{
-				"t": "夸克搜索",
-				"v": "quark"
-			}, {
 				"t": "跟随Via浏览器",
 				"v": "via"
+			}, {
+				"t": "夸克搜索",
+				"v": "quark"
 			}, {
 				"t": "百度搜索",
 				"v": "baidu"
