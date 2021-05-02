@@ -2,12 +2,11 @@
     background-color: rgba(255, 255, 255, 0.6);
     backdrop-filter: saturate(180%) blur(20px);
     transition: background-color 0.5s cubic-bezier(0.4, 0, 0.32, 1);
-    box-shadow: -3px 39px 102px -41px rgba(0, 0, 0, 0.54);
 }
 
-#app {
-    background: url(https://api.kdcc.cn/img/jump4k.php) center no-repeat fixed;
-    background-size: auto 100%;
+body {
+    background: url(https://api.kdcc.cn/img/jump4k.php) center no-repeat;
+    background-size: cover;
 }
 
 body::scroll-bar-thumb {

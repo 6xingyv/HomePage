@@ -4,6 +4,7 @@ require.config({
 });
 
 require(['jquery'], function ($) {
+	choice()
 	/**
 	 * 存储获取数据函数
 	 * @function get 存储数据
@@ -219,10 +220,6 @@ require(['jquery'], function ($) {
 		this.$ele = $(ele);
 		this.options = {
 			data: [{
-				"name": "精选",
-				"url": "choice()",
-				"icon": "icon/discover.png"
-			}, {
 				"name": "微博",
 				"url": "https://weibo.com",
 				"icon": "icon/weibo.png"
@@ -437,9 +434,6 @@ require(['jquery'], function ($) {
 					var url = dom.data("url");
 					if (url) {
 						switch (url) {
-							case "choice()":
-								choice();
-								break;
 							case "astt":
 								astt();
 								break;
@@ -1112,7 +1106,7 @@ require(['jquery'], function ($) {
 					"url": "shimo.im"
 				}]
 			},
-			html = '<div class="page-bg"></div><div class="page-choice"><div class="page-content acrliy"><ul class="choice-ul">',
+			html = '<div class="page-bg"></div><div class="page-choice"><div class="page-content"><ul class="choice-ul">',
 			tabHtml = '<li class="current">捷径</li>',
 			contentHtml = `<li class="choice-cut swiper-slide">
 			<div class="list h2"><a class="flex-1 content weather" href="https://quark.sm.cn/s?q=天气"><div>访问中</div><div></div><div></div></a><a class="flex-right content trivia" style="background-image:linear-gradient(148deg, rgb(0, 188, 150) 2%, rgb(129, 239, 201) 98%)"><div class="hl back-hl">今日冷知识</div><div class="shl" style="text-align: center;left: 15px;right: 15px;font-size: 12px;"></div><div class="cmp-icon" style="right: 20px; bottom: 0px; width: 62px; height: 54px; background-image: url(https://gw.alicdn.com/L1/723/1578466791/b3/f4/94/b3f494c724631d436989a4b7569952df.png);"></div></a></div>
@@ -1140,7 +1134,7 @@ require(['jquery'], function ($) {
 		});
 
 		// HTML添加到AP
-		$('#app').append(html + tabHtml + '<span class="active-span"></span></ul><div class="choice-swipe"><ul class="swiper-wrapper"><div style="position:absolute;text-align:center;top:50%;width:100%;margin-top:-64px;color:#444">正在加载页面中...</div></ul></div><div class="bottom-close acrliy"></div></div></div>');
+		$('#app2').append(html + tabHtml + '<span class="active-span"></span></ul><div class="choice-swipe"><ul class="swiper-wrapper"><div style="position:absolute;text-align:center;top:50%;width:100%;margin-top:-64px;color:#444">正在加载页面中...</div></ul></div></div></div>');
 
 		setTimeout(function () {
 			$(".page-bg").addClass("animation");
@@ -1182,19 +1176,6 @@ require(['jquery'], function ($) {
 					}
 				});
 			})
-
-			// 绑定关闭按钮事件
-			$(".bottom-close").click(function () {
-				$(".page-choice").css('pointer-events', 'none').removeClass("animation");
-				$(".page-bg").removeClass("animation");
-				$(".page-choice").on('transitionend', function (evt) {
-					if (evt.target !== this) {
-						return;
-					}
-					$(".page-choice").remove();
-					$(".page-bg").remove();
-				});
-			});
 
 			// 天气
 			$.ajax({
