@@ -473,7 +473,7 @@ body,html {
 /* 设置页面 */
 .page-settings{
 	opacity: 0;
-	transform:  translate3d(0, 60px, 0);
+	transform:  translate3d(620px, 0, 0);
 	transition: transform .3s,opacity .3s;
 	color:var(--dark);
 	background:var(--bg);
