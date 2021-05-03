@@ -248,7 +248,7 @@ require(['jquery'], function ($) {
 				"icon": "icon/ithome.png"
 			}, {
 				"name": "设置",
-				"url": "astt",
+				"url": "astt()",
 				"icon": "icon/settings.png"
 			}],
 		};
@@ -440,7 +440,7 @@ require(['jquery'], function ($) {
 							case "choice()":
 								choice();
 								break;
-							case "astt":
+							case "astt()":
 								astt();
 								break;
 							default:
