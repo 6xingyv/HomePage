@@ -11,5 +11,34 @@
 }
 
 body::scroll-bar-thumb {
-background:transport;
+    background: transport;
+}
+
+
+@font-face {
+    font-family: 'Material Icons';
+    src: url('./icons/MaterialIcons-Regular.woff2');
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'liga';
+}
+
+.mdui-icon, .mdui-icon::before {
+    color: inherit;
+    font-style: normal;
+    line-height: 1.2;
+    font-size: 20px;
+    direction: ltr;
+    letter-spacing: normal;
+    white-space: nowrap;
+    text-transform: none;
+    vertical-align: middle;
+    word-wrap: normal;
+    display: inline-block;
+    text-align: center top;
 }

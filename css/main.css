@@ -189,7 +189,7 @@ template {
 	outline: 0;
 	user-select: none;
 	-webkit-tap-highlight-color: transparent;
-	font-family: "Noto Sans CJK SC", "Source Han Sans CN", sans-serif !important;
+	font-family: "Noto Sans CJK SC", "Source Han Sans CN", sans-serif;
 }
 
 :after,
@@ -817,6 +817,7 @@ html {
 	top: 10%;
 	position: absolute;
 	width: calc(100% - 20px);
+	max-width: 600px;
 	height: calc(90% - 20px);
 	border-radius: 20px;
 	margin: 10px;
@@ -829,8 +830,8 @@ html {
 
 .set-option-from {
 	overflow: auto;
-	height: calc(100% - 90px);
-	padding: 0 10px 0 10px;
+	height: calc(100%);
+	padding: 0 10px 40px 10px;
 }
 
 .set-header {
@@ -903,7 +904,7 @@ html {
 }
 
 .set-option .set-checkbox+label::before {
-	background: rgba(214, 214, 214, 0.434);
+	background: rgba(100, 100, 100, 0.434);
 	height: 24px;
 	width: 40px;
 	transition: .15s cubic-bezier(0.24, 0, 0.5, 1);
@@ -959,8 +960,10 @@ html {
 }
 
 .set-hr {
-	height: 10px;
-	background-color: #f9f9f900;
+	height: 30px;
+    background-color: #f9f9f900;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 /* 精选页面 */
@@ -981,6 +984,7 @@ html {
 	top: 10%;
 	position: absolute;
 	width: 100%;
+	max-width: 600px;
 	height: 90%;
 	padding: 10px;
 	transform: translate3d(0, 100%, 0);

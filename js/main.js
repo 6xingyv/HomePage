@@ -1291,7 +1291,7 @@ require(['jquery'], function ($) {
 
 	function astt() {
 		var data = [{
-			"title": "搜索引擎",
+			"title": "<i class=\"mdui-icon material-icons\">search</i>搜索引擎",
 			"type": "select",
 			"value": "engines",
 			"data": [{
@@ -1323,13 +1323,13 @@ require(['jquery'], function ($) {
 				"v": "diy"
 			}]
 		}, {
-			"title": "设置LOGO",
+			"title": "<i class=\"mdui-icon material-icons\">av_timer</i>设置LOGO",
 			"value": "logo"
 		}, {
-			"title": "恢复默认LOGO",
+			"title": "<i class=\"mdui-icon material-icons\">settings_backup_restore</i>恢复默认LOGO",
 			"value": "delLogo"
 		}, {
-			"title": "图标颜色",
+			"title": "<i class=\"mdui-icon material-icons\">attach_file</i>图标颜色",
 			"type": "select",
 			"value": "bookcolor",
 			"data": [{
@@ -1340,43 +1340,39 @@ require(['jquery'], function ($) {
 				"v": "white"
 			}]
 		}, {
-			"title": "主页样式细圆",
+			"title": "<i class=\"mdui-icon material-icons\">adjust</i>主页样式细圆",
 			"type": "checkbox",
 			"value": "styleThin"
 		}, {
-			"title": "夜间模式",
+			"title": "<i class=\"mdui-icon material-icons\">brightness_4</i>夜间模式",
 			"type": "checkbox",
 			"value": "nightMode"
 		}, {
-			"title": "记录搜索历史",
+			"title": "<i class=\"mdui-icon material-icons\">camera_roll</i>记录搜索历史",
 			"type": "checkbox",
 			"value": "searchHistory"
 		}, {
-			"type": "hr"
-		}, {
-			"title": "导出主页数据",
+			"title": "<i class=\"mdui-icon material-icons\">backup</i>导出主页数据",
 			"value": "export"
 		}, {
-			"title": "导入主页数据",
+			"title": "<i class=\"mdui-icon material-icons\">cloud_download</i>导入主页数据",
 			"value": "import"
 		}, {
-			"type": "hr"
-		}, {
-			"title": "Github",
+			"title": "<i class=\"mdui-icon material-icons\">report</i>Github",
 			"value": "openurl",
 			"description": "https://github.com/6xingyv/HomePage"
 		}, {
-			"title": "关于",
+			"title": "<i class=\"mdui-icon material-icons\">toys</i>关于",
 			"value": "about",
 			"description": "当前版本：" + app.version + "<br>这是一个简单的主页，目前兼容via浏览器，其他浏览器也可以试试。<br>目前壁纸来源是Bing美图~每天精选全球摄影就不用担心壁纸选择困难症了！"
 		}, {
-			"title": "鸣谢",
+			"title": "<i class=\"mdui-icon material-icons\">local_florist</i>鸣谢",
 			"description": "刘明野/quarkHomePage"
 		}];
-		var html = '<div class="page-settings acrliy"><div class="set-header"><p class="set-logo">主页设置</p></div><ul class="set-option-from">';
+		var html = '<div class="page-bg"></div><div class="page-settings acrliy"><ul class="set-option-from"><div class="set-header"><p class="set-logo">主页设置</p></div>';
 		for (var json of data) {
 			if (json.type === 'hr') {
-				html += `<li class="set-hr"></li>`;
+				html += `<li class="set-hr">`+ json.title +`</li>`;
 			} else {
 				html += `<li class="set-option" ${json.value ? `data-value="${json.value}"` : ''}>
 							<div class="set-text">
@@ -1397,6 +1393,9 @@ require(['jquery'], function ($) {
 		}
 		html += '</ul><div class="bottom-close acrliy" style="left:0"></div></div>';
 		$('#app').append(html);
+		setTimeout(function () {
+			$(".page-bg").addClass("animation");
+		}, 1);
 
 		$(".page-settings").show();
 		$(".page-settings").addClass('animation');
@@ -1416,11 +1415,13 @@ require(['jquery'], function ($) {
 
 		$(".bottom-close").click(function () {
 			$(".page-settings").css("pointer-events", "none").removeClass("animation");
+			$(".page-bg").removeClass("animation");
 			$(".page-settings").on('transitionend', function (evt) {
 				if (evt.target !== this) {
 					return;
 				}
 				$(".page-settings").remove();
+				$(".page-bg").remove();
 			});
 		});
 
