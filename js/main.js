@@ -1373,7 +1373,7 @@ require(['jquery'], function ($) {
 			"title": "鸣谢",
 			"description": "刘明野/quarkHomePage"
 		}];
-		var html = '<div class="page-settings"><div class="set-header acrliy"><div class="set-back"></div><p class="set-logo">主页设置</p></div><ul class="set-option-from">';
+		var html = '<div class="page-settings acrliy"><div class="set-header"><p class="set-logo">主页设置</p></div><ul class="set-option-from">';
 		for (var json of data) {
 			if (json.type === 'hr') {
 				html += `<li class="set-hr"></li>`;
@@ -1395,7 +1395,7 @@ require(['jquery'], function ($) {
 				html += `</li>`;
 			}
 		}
-		html += '</ul></div>';
+		html += '</ul><div class="bottom-close acrliy" style="left:0"></div></div>';
 		$('#app').append(html);
 
 		$(".page-settings").show();
@@ -1414,7 +1414,7 @@ require(['jquery'], function ($) {
 			$(this).prop("checked", settings.get($(this).parent().data('value')));
 		});
 
-		$(".set-back").click(function () {
+		$(".bottom-close").click(function () {
 			$(".page-settings").css("pointer-events", "none").removeClass("animation");
 			$(".page-settings").on('transitionend', function (evt) {
 				if (evt.target !== this) {

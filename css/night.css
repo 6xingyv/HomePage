@@ -82,15 +82,13 @@ body {
 .set-option:active{
 	background: #212121;
 }
-.set-hr {
-	background-color: #212121;
-}
 .choice-li a div {
 	background: #282828;
 }
 .choice-li a:active > div,
 .choice-ul li:active {
-	background: #181818;
+	background: #18181818;
+	border-radius: 20px;
 }
 .choice-ul li {
 	color: #545454;
@@ -114,4 +112,7 @@ body {
 .logo {
 	-webkit-filter: brightness(60%);
 	filter: brightness(60%);
+}
+.acrliy {
+	background: rgba(100, 100, 100, 0.6);
 }
