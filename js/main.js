@@ -1543,7 +1543,7 @@ require(['jquery'], function ($) {
 				break;
 			default:
 				var ua = navigator.userAgent;
-				console.log(ua);
+				alert(ua);
 				alert('子非via，安能如其装插件？')
 				break;
 		}
