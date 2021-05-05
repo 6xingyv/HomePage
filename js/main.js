@@ -1544,7 +1544,7 @@ require(['jquery'], function ($) {
 			default:
 				var ua = navigator.userAgent;
 				alert(ua);
-				alert('子非via，安能如其装插件？')
+				alert('子非via，安能如其装插件？');
 				break;
 		}
 	});
